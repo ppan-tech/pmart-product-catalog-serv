@@ -1,4 +1,4 @@
-package com.pmart.pmartproductcatalogserv.model;
+package com.pmart.pmartproductcatalogserv.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
