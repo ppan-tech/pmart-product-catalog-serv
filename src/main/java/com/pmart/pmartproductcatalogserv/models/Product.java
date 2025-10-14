@@ -11,8 +11,9 @@ public class Product {
     private String name;
     private String description;
     private Double price;
-    private String category;
     private String imageUrl;
+    private Category category;
+
 
     @Override
     public String toString() {
@@ -21,7 +22,7 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", category='" + category + '\'' +
+                ", category='" + category.getName() + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
