@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 /*
-    Global Exception Handler to manage common exceptions across the application.
+    Global Exception Handler to manage common exceptions across the application.(checked & unchecked)
+    This improves code reusability, maintainability, and provides a consistent error response structure.
+    It also helps in logging exceptions in a centralized manner.
 */
 
 @Slf4j // This creates 'private static final Logger log = LoggerFactory.getLogger(MyApiController.class);'
