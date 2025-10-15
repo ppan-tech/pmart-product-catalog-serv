@@ -1,16 +1,24 @@
 package com.pmart.pmartproductcatalogserv.models;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Category {
-    private Long id;
-    private String name;
-    private String description;
+@Entity
+public class Category extends BaseModel implements Serializable {
+
+    @OneToMany(mappedBy = "category")
+    @Fetch(FetchMode.SUBSELECT)
+    @JsonIgnore
+    List<Product> products;
 }
